@@ -83,7 +83,10 @@
       <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib;sfml-system-d.lib;sfml-window-d.lib	;sfml-audio-d.lib	;sfml-network-d.lib	;sfml-system-d.lib	;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)SFML32bit\bin\*.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)SFML32bit\bin\*.dll" "$(OutDir)" 
+mkdir $(OutDir)Assets
+
+copy "$(ProjectDir)Assets" "$(OutDir)Assets"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -99,7 +102,10 @@
       <AdditionalDependencies>sfml-graphics-d.lib	;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib	;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)SFML64bit\bin\*.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)SFML64bit\bin\*.dll" "$(OutDir)" 
+mkdir $(OutDir)Assets
+
+copy "$(ProjectDir)Assets" "$(OutDir)Assets"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -120,7 +126,10 @@
       <AdditionalDependencies>sfml-graphics-s.lib	;sfml-window-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;jpeg.lib;sfml-window-s.lib	;winmm.lib;gdi32.lib;sfml-audio-s.lib	;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-network-s.lib	;ws2_32.lib;sfml-system-s.lib	;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)SFML32bit\bin\*.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)SFML32bit\bin\*.dll" "$(OutDir)"
+mkdir $(OutDir)Assets
+
+copy "$(ProjectDir)Assets" "$(OutDir)Assets"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -141,7 +150,10 @@
       <AdditionalDependencies>sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;jpeg.lib;winmm.lib;gdi32.lib;sfml-audio-s.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-network-s.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)SFML64bit\bin\*.dll" "$(OutDir)"</Command>
+      <Command>copy "$(SolutionDir)SFML64bit\bin\*.dll" "$(OutDir)" 
+mkdir $(OutDir)Assets
+
+copy "$(ProjectDir)Assets" "$(OutDir)Assets"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
